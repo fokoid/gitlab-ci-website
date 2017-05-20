@@ -1,0 +1,42 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  SITE_SOURCE_DIR: "$CI_PROJECT_DIR"
+  SITE_BUILD_DIR: "$CI_PROJECT_DIR/_site"
+  APP_DIR: "$CI_PROJECT_DIR/app"
+  APP_NAME: "test_app"
+  APP_NAME_STAGING: "test_app_staging"
+  VERSION: "1"
+
+prepare_app:
+  image: jekyll/builder
+  stage: build
+  script:
+    - make build
+  artifacts:
+    paths:
+     - "$APP_DIR"
+
+stage_app:
+  image: google/cloud-sdk
+  stage: deploy
+  script:
+    - echo $STAGING_KEY > key.json
+    - gcloud auth activate-service-account --key-file key.json
+    - gcloud config set project $APP_NAME_STAGING
+    - gcloud config set app/promote_by_default false
+    - gcloud app deploy ${APP_DIR}/app_staging.yaml --version=$CI_BUILD_REF_NAME
+
+deploy_app:
+  image: google/cloud-sdk
+  stage: deploy
+  when: manual
+  only:
+    - master
+  script:
+    - echo $PRODUCTION_KEY > key.json
+    - gcloud auth activate-service-account --key-file key.json
+    - gcloud config set project $APP_NAME
+    - gcloud app deploy ${APP_DIR}/app_production.yaml --version=$VERSION
