@@ -4,8 +4,6 @@ title: "Help: General Introduction"
 permalink: /help/intro
 ---
 
-# General Introduction
-
 [Jekyll][Jekyll] is a _static site generator_. It takes templates,
 content files and themes and outputs the finished site. The "static" part of the
 name means that there is no database or serverside code involved.

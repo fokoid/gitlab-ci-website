@@ -4,12 +4,15 @@ title: "Guide: App Engine Service Accounts"
 permalink: /help/service-accounts
 ---
 
-# {{page.title}}
 For the GitLab CI process to deploy your website to the Google App Engine
 application automatically, it needs to be properly authorized. When pushing to
 App Engine manually, a Google account with the appropriate permissions for the
 app can be used. For deployment by an automated process, a _service account_
 should be used.
+
+## Prerequesites
+
+* projects on App Engine for [production and staging sites][Guide_GAEProjects]
 
 ## Creating a service account
 
@@ -55,3 +58,4 @@ For details of configuring Gitlab secret variables, see the relevant
 
 [CloudConsole]: https://console.cloud.google.com/
 [GitLabCI_SecretVariables]: https://docs.gitlab.com/ee/ci/variables/#secret-variables
+[Guide_GAEProjects]: {{site.github.url}}/help/appengine-projects
