@@ -1,6 +1,6 @@
 ---
 layout: help
-title: "Help - General Introduction"
+title: "Help: General Introduction"
 permalink: /help/intro
 ---
 
