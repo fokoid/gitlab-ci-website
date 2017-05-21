@@ -31,7 +31,10 @@ instructions if you need them. You can also check out the project
     1. Set the `APP_NAME` and `APP_NAME_STAGING` variables to the names of the
        projects created above.
     2. Set the `VERSION` variable as desired.
-4. [Create an App Engine service account][Guide_ServiceAccount] for each project
+4. Copy the `app` directory into the root of your project.
+5. Configure the `app/app_*.yaml` files accordingly. (A guide covering this
+   will be written when I have time.)
+6. [Create an App Engine service account][Guide_ServiceAccount] for each project
    and store the private keys in GitLab secret variables called `STAGING_KEY`
    and `PRODUCTION_KEY`.
 

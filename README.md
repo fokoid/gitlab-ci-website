@@ -17,6 +17,9 @@ configure it as with `.gitlab-ci.yml`. Note, however, that the makefile assumes
 that you are already authenticated with a suitable Google account or service
 account.
 
+You should also copy the `app` directory and update the production and staging
+`app_*.yaml` files appropriately.
+
 ### Variables
 
 Assuming you have not changed the default Jekyll config, you need to change only
@@ -35,11 +38,11 @@ project
 |   .gitlab-ci.yml
 |   Makefile
 |   ...
-├── _site             (Jekyll output directory)
-├── app               (AppEngine directory)
-|     app.yaml        (config for production app)
-|     app_staging.yml (config for staging app)
-|     www             (copy of _site created by Makefile/GitLab CI script)
+├── _site                   (Jekyll output directory)
+├── app                     (AppEngine directory)
+|     app_production.yaml   (config for production app)
+|     app_staging.yml       (config for staging app)
+|     www                   (copy of _site created by Makefile/GitLab CI script)
 ```
 
 ### Repository Config

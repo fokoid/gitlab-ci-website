@@ -1,0 +1,40 @@
+runtime: python27
+api_version: 1
+threadsafe: false
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+handlers:
+
+- url: /$
+  static_files: www/about/index.html
+  upload: www/about/index.html
+  secure: always
+  login: admin
+
+# this is an example entry for a serverside page
+#- url: /contact/
+#  script: contact.app
+#  secure: always
+#  login: admin
+
+- url: /(.*)/$
+  static_files: www/\1/index.html
+  upload: www/.*/index.html
+  secure: always
+  login: admin
+
+- url: /.well-known/acme-challenge/(.+)
+  static_files: www/well-known/acme-challenge/\1
+  mime_type: text/plain
+  upload: www/well-known/acme-challenge/.*
+
+- url: /(.+)
+  static_files: www/\1
+  upload: www/(.*)
+  secure: always
+  login: admin
