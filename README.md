@@ -9,8 +9,8 @@ deployed to Google AppEngine.
 For usage with GitLab CI, simply copy `.gitlab-ci.yml` into your project. To
 configure the script for your website you need only change the variables
 declared at the top of the file and then configure your source and repository
-accordingly. Read on for a quick summary, or see the [wiki][wiki] for full setup
-instructions.
+accordingly. Read on for a quick summary, or see the [website][GitHubPages] for
+full setup instructions.
 
 For manual usage on your development machine, copy the `Makefile` and again,
 configure it as with `.gitlab-ci.yml`. Note, however, that the makefile assumes
@@ -74,8 +74,9 @@ deployment targets and CI platforms..
 * [X] [GitLab CI][CI_GitLab]
 * [ ] [Travis CI][CI_Travis]
 
-[Jekyll]:     https://jekyllrb.com/
-[Hakyll]:     https://jaspervdj.be/hakyll/
-[Hyde]:       https://hyde.github.io/
-[CI_GitLab]:  https://about.gitlab.com/features/gitlab-ci-cd/
-[CI_Travis]:  https://travis-ci.org/
+[Jekyll]:       https://jekyllrb.com/
+[Hakyll]:       https://jaspervdj.be/hakyll/
+[Hyde]:         https://hyde.github.io/
+[CI_GitLab]:    https://about.gitlab.com/features/gitlab-ci-cd/
+[CI_Travis]:    https://travis-ci.org/
+[GitHubPages]:  https://thornecc.github.io/gitlab-ci-website/
