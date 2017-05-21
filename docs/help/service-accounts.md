@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: help
 title: "Guide: App Engine Service Accounts"
 permalink: /help/service-accounts
 ---
