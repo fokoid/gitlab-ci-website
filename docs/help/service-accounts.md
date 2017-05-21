@@ -1,9 +1,10 @@
 ---
 layout: default
-title: "Help - AppEngine Service Accounts"
+title: "Guide: AppEngine Service Accounts"
 permalink: /help/service-accounts
 ---
 
+# {{page.title}}
 For the GitLab CI process to deploy your website to the Google AppEngine
 application automatically, it needs to be properly authorized. When pushing to
 AppEngine manually, a Google account with the appropriate permissions for the
