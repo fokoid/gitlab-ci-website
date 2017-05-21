@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Guide: AppEngine Service Accounts"
+title: "Guide: App Engine Service Accounts"
 permalink: /help/service-accounts
 ---
 
 # {{page.title}}
-For the GitLab CI process to deploy your website to the Google AppEngine
+For the GitLab CI process to deploy your website to the Google App Engine
 application automatically, it needs to be properly authorized. When pushing to
-AppEngine manually, a Google account with the appropriate permissions for the
+App Engine manually, a Google account with the appropriate permissions for the
 app can be used. For deployment by an automated process, a _service account_
 should be used.
 
@@ -17,10 +17,10 @@ The service account can be created in the [Google Cloud Console][CloudConsole]
 with the following steps.
 
 1. Select your staging app.
-2. Enable the AppEngine Admin API
+2. Enable the App Engine Admin API
     1. Go to the _API Manager_
     2. Click _Enable API_
-    3. Select _AppEngine Admin API_
+    3. Select _App Engine Admin API_
 3. Create the service account
     1. Go to _IAM & Admin_ > _Service Accounts_
     2. Click _Create Service Account_

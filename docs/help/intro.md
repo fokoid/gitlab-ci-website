@@ -15,13 +15,13 @@ performance). Jekyll, on the other hand, generates all the pages in advance, in
 a process called compilation,
 before they are placed on the web server.
 
-[Google AppEngine][AppEngine] is a _platform as a service_ [PaaS][PaaS] where
-developers can host their apps. While the main focus of AppEngine is apps with
+[Google App Engine][AppEngine] is a _platform as a service_ [PaaS][PaaS] where
+developers can host their apps. While the main focus of App Engine is apps with
 serverside logic, it also supports static files, meaning it is possible to host
 a Jekyll generated site there.
 
 The purpose of this repository is to provide boilerplate code to automate the
-process of building a site with Jekyll and deploying it to Google AppEngine.
+process of building a site with Jekyll and deploying it to Google App Engine.
 This repository _is not_ a finished product you can use out of the box. It
 simply provides a few sample files you can start from to implement automatic
 build and deployment of your static site on [GitLab CI][GitLabCI].
